@@ -18,7 +18,6 @@ const handleChange = async (lat, lng) => {
     try {
         const response = await fetch(url);
         const data = await response.json();
-        // console.log(data.timeZoneId);
         setTimezone(data.timeZoneId);
         setTime(data.timeZoneId);
     } catch (error) {
