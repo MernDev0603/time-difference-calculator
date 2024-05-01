@@ -31,7 +31,6 @@ return (
         <CountrySelect
             onChange={(e) => {
                 setCountryid(e.id);
-                console.log(e);
                 handleChange(e.latitude, e.longitude);
             }}
             placeHolder="Select Country"

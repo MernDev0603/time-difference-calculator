@@ -14,8 +14,8 @@ function getTimeDifference(fromTimeZone, toTimeZone) {
   const now = moment();
 
   // const diff = moment.tz(toTime, toTimeZone).diff(moment.tz(fromTime, fromTimeZone), 'hours');
-  const offset1 = moment.tz.zone(fromTimeZone).utcOffset(now);
-  const offset2 = moment.tz.zone(toTimeZone).utcOffset(now);
+  const offset1 = fromTimeZone ? moment.tz.zone(fromTimeZone).utcOffset(now) : 0;
+  const offset2 = toTimeZone ? moment.tz.zone(toTimeZone).utcOffset(now) : 0;
 
   const offsetDifference = (offset1 - offset2) / 60;
 
